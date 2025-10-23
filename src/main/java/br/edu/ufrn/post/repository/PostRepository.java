@@ -9,6 +9,6 @@ import reactor.core.publisher.Flux;
 @Repository
 public interface PostRepository extends ReactiveMongoRepository<Post, String> {
 
-    Flux<Post> getAllByUserId(String userId);
+    Flux<Post> findAllByUserId(String userId);
     
 }

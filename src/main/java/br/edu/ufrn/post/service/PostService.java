@@ -34,7 +34,7 @@ public class PostService {
     }
 
     public Flux<PostDTO> getAllByUserId(String userId) {
-        return postRepository.getAllByUserId(userId)
+        return postRepository.findAllByUserId(userId)
             .map(
                 post -> new PostDTO(
                     post.getId(),
