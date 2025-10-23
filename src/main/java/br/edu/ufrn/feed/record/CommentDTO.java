@@ -1,11 +1,11 @@
-package br.edu.ufrn.post.record;
+package br.edu.ufrn.feed.record;
 
 import java.time.Instant;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public record PostDTO(
+public record CommentDTO(
     String id,
     String content,
     UserDTO user,

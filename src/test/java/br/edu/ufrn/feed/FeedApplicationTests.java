@@ -1,10 +1,10 @@
-package br.edu.ufrn.post;
+package br.edu.ufrn.feed;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PostApplicationTests {
+class FeedApplicationTests {
 
 	@Test
 	void contextLoads() {

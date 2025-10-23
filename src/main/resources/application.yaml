@@ -1,6 +1,6 @@
 spring:
     application:
-        name: post
+        name: feed
     cloud:
         config:
             discovery:

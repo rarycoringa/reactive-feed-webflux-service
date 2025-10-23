@@ -1,4 +1,4 @@
-package br.edu.ufrn.post;
+package br.edu.ufrn.feed;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.web.reactive.config.EnableWebFlux;
 @EnableWebFlux
 @EnableCaching
 @SpringBootApplication
-public class PostApplication {
+public class FeedApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PostApplication.class, args);
+		SpringApplication.run(FeedApplication.class, args);
 	}
 
 }

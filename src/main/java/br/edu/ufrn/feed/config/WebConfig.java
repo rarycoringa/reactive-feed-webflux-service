@@ -1,4 +1,4 @@
-package br.edu.ufrn.post.config;
+package br.edu.ufrn.feed.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;

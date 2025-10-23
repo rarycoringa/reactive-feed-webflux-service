@@ -1,11 +1,11 @@
 services:
-  post-webflux:
+  feed-webflux:
     build: .
-    container_name: post-webflux
+    container_name: feed-webflux
     environment:
-      - SERVER_PORT=8282
+      - SERVER_PORT=8383
     ports:
-      - "8282:8282"
+      - "8383:8383"
     networks:
       - reactive-ms-network
 

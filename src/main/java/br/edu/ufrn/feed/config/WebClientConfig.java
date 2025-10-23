@@ -1,4 +1,4 @@
-package br.edu.ufrn.post.config;
+package br.edu.ufrn.feed.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;

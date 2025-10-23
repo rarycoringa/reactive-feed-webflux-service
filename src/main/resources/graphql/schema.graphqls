@@ -9,43 +9,20 @@ type User {
 
 type Comment {
     id: String!
-    content: String!
-    user: User!
+    content: String
+    user: User
 }
 
 type Post {
     id: String!
-    content: String!
-    user: User!
-    createdAt: String!
-    comments: [Comment]!
-}
-
-# Inputs
-
-input CreatePostInput {
-    content: String!
-    userId: String!
-}
-
-input CreateCommentInput {
-    content: String!
-    userId: String!
+    content: String
+    user: User
+    createdAt: String
+    comments: [Comment]
 }
 
 # Queries
 
 type Query {
-    getAll: [Post]!
-    getAllByUserId(userId: String!): [Post]!
-    getById(id: String!): Post
-}
-
-# Mutations
-
-type Mutation {
-    save(createPostInput: CreatePostInput!): Post!
-    saveComment(postId: String, createCommentInput: CreateCommentInput): Comment!
-    delete(id: String!): Boolean
-    deleteComment(id: String!): Boolean
+    getLatestPosts(limit: Int!): [Post]!
 }

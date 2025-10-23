@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.edu.ufrn</groupId>
-	<artifactId>post</artifactId>
+	<artifactId>feed</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>post</name>
-	<description>Post Webflux Service</description>
+	<name>feed</name>
+	<description>Feed Webflux Service</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -42,16 +42,6 @@
 			<artifactId>spring-boot-starter-webflux</artifactId>
 		</dependency>
 
-		<!-- Storage dependencies -->
-		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
-        </dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-redis-reactive</artifactId>
-		</dependency>
-
 		<!-- Cloud dependencies -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -60,24 +50,6 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-
-		<!-- Fault Tolerance dependencies -->
-		<dependency>
-			<groupId>io.github.resilience4j</groupId>
-			<artifactId>resilience4j-spring-boot3</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.github.resilience4j</groupId>
-			<artifactId>resilience4j-reactor</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.github.resilience4j</groupId>
-			<artifactId>resilience4j-retry</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>io.github.resilience4j</groupId>
-			<artifactId>resilience4j-circuitbreaker</artifactId>
 		</dependency>
 
 		<!-- Observability dependencies -->
@@ -130,15 +102,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-
-			<!-- Resilience4j BOM -->
-			<dependency>
-				<groupId>io.github.resilience4j</groupId>
-				<artifactId>resilience4j-bom</artifactId>
-				<version>${resilience4j.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-        	</dependency>
 		</dependencies>
 	</dependencyManagement>
 
