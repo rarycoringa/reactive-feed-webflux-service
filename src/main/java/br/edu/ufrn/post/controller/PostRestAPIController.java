@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.edu.ufrn.post.client.UserRestAPIClient;
 import br.edu.ufrn.post.record.CreatePostDTO;
 import br.edu.ufrn.post.record.PostDTO;
 import br.edu.ufrn.post.service.PostService;
-import jakarta.ws.rs.QueryParam;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -35,7 +35,7 @@ public class PostRestAPIController {
     }
 
     @GetMapping(params = "user_id", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<PostDTO> getAllByUserId(@QueryParam("user_id") String userId) {
+    public Flux<PostDTO> getAllByUserId(@RequestParam("user_id") String userId) {
         return postService.getAllByUserId(userId)
             .flatMap(this::enrichUser);
     }
